@@ -64,9 +64,9 @@ userImpl.prototype.deleteUser = function (user, userId, updatedAt, callback) {
   );
 };
 
-/***** Get Camera List *****/
+/***** Get User List *****/
 userImpl.prototype.getUserList = function (callback) {
-  User.find({}, function (getListUserErr, getUserListResult) {
+  User.find({ is_deleted: false,is_active:true }, function (getListUserErr, getUserListResult) {
     if (!getListUserErr) {
       callback(null, getUserListResult);
     } else {
