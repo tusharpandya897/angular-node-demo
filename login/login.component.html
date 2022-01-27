@@ -1,0 +1,29 @@
+<div class="container row">
+  <div class="brands col-md-12 text-center">
+    <img class="brand-logo" alt="Denso" src="../../assets/images/toyota-logo-3.png">
+  </div>
+  <div class="offset-5 col-md-6">
+    <form class="login-form">
+      <h2>Login</h2>
+      <br>
+      <div class="col-md-9 pl-0">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" [(ngModel)]="userName" name="username" class="form-control" placeholder="Username">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" [(ngModel)]="password" name="password" class="form-control" placeholder="Password">
+        </div>
+        <div class="alert alert-danger" *ngIf="loginMessage != ''">
+          {{loginMessage}}
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary w-100" (click)="validateUser()">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+<ngx-spinner size="medium" color="#fff" type="ball-clip-rotate-pulse" [fullScreen] = "true">
+  <p style="color: white" > Logging in ... </p>
+</ngx-spinner>

@@ -1,0 +1,25 @@
+.container {
+    margin-top: 50px;
+}
+
+.brand-logo {
+    /* margin: 0px 0px 30px 260px; */
+    width: 41%;
+}
+
+.login-form {
+    margin-left: 30px;
+}
+
+@media (min-width: 360px){
+    .brand-logo {
+        /* margin: 0px 0px 30px 260px; */
+        width: 100%;
+    }
+}
+@media (min-width: 768px){
+    .brand-logo {
+        /* margin: 0px 0px 30px 260px; */
+        width: 41%;
+    }
+}

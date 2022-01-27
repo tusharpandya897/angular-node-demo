@@ -1,0 +1,42 @@
+<ngx-spinner size="medium" color="#fff" type="ball-clip-rotate-pulse" [fullScreen]="true">
+    <p style="color: white"> Logging in ... </p>
+</ngx-spinner>
+<div class="container py-3">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-12 text-center mb-5">
+                <img class="brand-logo" src="../../assets/images/toyota-logo-3.png">
+            </div>
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <!-- form card login -->
+                    <div class="card rounded-0" id="login-form">
+                        <div class="card-header">
+                            <h3 class="mb-0">User Login</h3>
+                        </div>
+                        <div class="card-body">
+                            <form class="form" role="form" id="formLogin">
+                                <div class="form-group">
+                                    <label for="userName">Username</label>
+                                    <input type="text" [(ngModel)]="userName"
+                                        class="form-control form-control-lg rounded-0" name="userName">
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" [(ngModel)]="password"
+                                        class="form-control form-control-lg rounded-0" name="password" required="">
+                                </div>
+                                <div class="alert alert-danger" *ngIf="loginMessage != ''">
+                                    {{loginMessage}}
+                                </div>
+                                <button type="submit" (click)="validateUser()"
+                                    class="btn btn-success btn-lg form-control" id="btnLogin">Login</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /form card login end-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
